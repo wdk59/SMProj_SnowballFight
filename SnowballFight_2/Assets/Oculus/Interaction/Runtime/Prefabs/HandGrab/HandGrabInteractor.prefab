@@ -297,6 +297,8 @@ MonoBehaviour:
   _pinchPoint: {fileID: 2089408844803092864}
   _pinchCollider: {fileID: 8199943907985717667}
   _velocityCalculator: {fileID: 0}
+  snowball: {fileID: 0}
+  snowballSpawnPos: {fileID: 0}
 --- !u!114 &3988025341347685241
 MonoBehaviour:
   m_ObjectHideFlags: 0

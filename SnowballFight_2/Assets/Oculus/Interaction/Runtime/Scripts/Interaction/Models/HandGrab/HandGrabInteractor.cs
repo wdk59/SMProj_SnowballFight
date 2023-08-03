@@ -284,7 +284,7 @@ namespace Oculus.Interaction.HandGrab
                 VelocityCalculator.CalculateThrowVelocity(interactable.transform) :
                 new ReleaseVelocityInformation(Vector3.zero, Vector3.zero, Vector3.zero);
             interactable.ApplyVelocities(throwVelocity.LinearVelocity*5, throwVelocity.AngularVelocity);
-            Debug.Log("[HandGrabInteractor] interactableunselected - throwVelocity.LinearVelocity\nx:" + throwVelocity.LinearVelocity.x + " y:" + throwVelocity.LinearVelocity.y + " z:" + throwVelocity.LinearVelocity.z);
+            Destroy(interactable.gameObject.transform.parent.gameObject, 5.0f);
         }
 
         protected override void HandlePointerEventRaised(PointerEvent evt)

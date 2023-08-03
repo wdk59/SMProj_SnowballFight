@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Snowball
-  - SpawnPos
+  - Snowman
+  - Dummy
   layers:
   - Default
   - TransparentFX

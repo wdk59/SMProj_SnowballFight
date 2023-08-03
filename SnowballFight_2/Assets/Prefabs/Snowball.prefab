@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 6955282772565083050}
   - component: {fileID: 6955282772565083055}
   - component: {fileID: 6955282772565083051}
+  - component: {fileID: 1774010293101801925}
   m_Layer: 0
   m_Name: Snowball
   m_TagString: Snowball
@@ -215,6 +216,19 @@ MonoBehaviour:
   _grabbable: {fileID: 6955282772565083052}
   _rigidbody: {fileID: 6955282772565083055}
   _scaleMassWithSize: 1
+--- !u!114 &1774010293101801925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6955282772565083041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853a249fc28a1a94d9823d27f2f10889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionPrefab: {fileID: 297973053369903715, guid: 169db298e9010fb4998e744aed6ea102, type: 3}
 --- !u!1 &6955282773498383672
 GameObject:
   m_ObjectHideFlags: 0
