@@ -85,6 +85,9 @@ namespace Oculus.Interaction.HandGrab
         private HandGrabResult _cachedResult = new HandGrabResult();
         private HandGrabInteractable _selectedInteractableOverride;
 
+        public GameObject snowball;
+        public Transform snowballSpawnPos;
+
         #region IHandGrabInteractor
         public IMovement Movement { get; set; }
         public bool MovementFinished { get; set; }
@@ -253,6 +256,17 @@ namespace Oculus.Interaction.HandGrab
                 SetGrabStrength(1f);
             }
 
+            Debug.Log("π∫∞° ¿‚æ“¥Á");
+            Debug.Log("¿‚¿∫ ∞≈: " + interactable.gameObject.transform.parent.tag);
+            if (interactable.gameObject.transform.parent.tag == "Snowball")
+            {
+                Debug.Log("¥´µ¢¿Ã ¿‚æ“¥Á");
+                Debug.Log("¥´µ¢¿Ã kinematic: " + interactable.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic);
+                interactable.gameObject.transform.parent.GetComponent<Rigidbody>().isKinematic = false;
+
+                Instantiate(snowball, snowballSpawnPos.position, snowballSpawnPos.rotation);
+            }
+
             base.InteractableSelected(interactable);
         }
 
@@ -270,7 +284,7 @@ namespace Oculus.Interaction.HandGrab
                 VelocityCalculator.CalculateThrowVelocity(interactable.transform) :
                 new ReleaseVelocityInformation(Vector3.zero, Vector3.zero, Vector3.zero);
             interactable.ApplyVelocities(throwVelocity.LinearVelocity*5, throwVelocity.AngularVelocity);
-            Debug.Log("[HandGrabInteractor] interactableunselected - throwVelocity.LinearVelocity\nx:" + throwVelocity.LinearVelocity.x + "\ny:" + throwVelocity.LinearVelocity.y + "\nz:" + throwVelocity.LinearVelocity.z);
+            Debug.Log("[HandGrabInteractor] interactableunselected - throwVelocity.LinearVelocity\nx:" + throwVelocity.LinearVelocity.x + " y:" + throwVelocity.LinearVelocity.y + " z:" + throwVelocity.LinearVelocity.z);
         }
 
         protected override void HandlePointerEventRaised(PointerEvent evt)

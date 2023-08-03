@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CreatingSnowball : MonoBehaviour
 {
-    public void HoverDummy()
-    {
-        Debug.Log("HoverDummy()");
-    }
 
     public void CreateSnowball() {
-        Debug.Log("CreateSnowball()");
+        Debug.Log("CreateSnowball");
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        //CreateSnowball();
     }
 }
