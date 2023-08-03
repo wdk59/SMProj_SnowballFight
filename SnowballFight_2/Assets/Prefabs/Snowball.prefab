@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853a249fc28a1a94d9823d27f2f10889, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionPrefab: {fileID: 297973053369903715, guid: 169db298e9010fb4998e744aed6ea102, type: 3}
+  crashSoundPrefab: {fileID: 297973053369903715, guid: 169db298e9010fb4998e744aed6ea102, type: 3}
 --- !u!1 &6955282773498383672
 GameObject:
   m_ObjectHideFlags: 0

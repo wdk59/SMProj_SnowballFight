@@ -21,7 +21,7 @@ public class SnowballCollisionCheck : MonoBehaviour
             //AudioSource.PlayClipAtPoint(crashSoundClip, position, 10);
         }
 
-        if (collision.gameObject.tag != "Dummy")
+        if (collision.gameObject.tag != "Dummy" && collision.gameObject.tag != "Snowball")
         {
             Debug.Log("¸ø ¸ÂÃã!");
             Destroy(gameObject);
