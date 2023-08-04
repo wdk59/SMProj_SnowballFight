@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638266411449662572
-    m_Hash: 3897100126
+      ticks: 638266520223749396
+    m_Hash: 341302996
   m_LockFileStatus:
     m_FilePath: C:/School/SMProj/02. SnowballFight/SMProj_SnowballFight/SnowballFight_2/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638266411459918485
-    m_Hash: 469380991
+      ticks: 638266520223783691
+    m_Hash: 2411800340
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
