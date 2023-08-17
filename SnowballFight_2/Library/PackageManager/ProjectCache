@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638266520223749396
-    m_Hash: 341302996
+      ticks: 638278513612806560
+    m_Hash: 3897100126
   m_LockFileStatus:
     m_FilePath: C:/School/SMProj/02. SnowballFight/SMProj_SnowballFight/SnowballFight_2/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638266520223783691
-    m_Hash: 2411800340
+      ticks: 638278513633851800
+    m_Hash: 469380991
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -3282,6 +3282,7 @@ m_PackageAssets:
         - 1.8.2
         - 1.9.0
         - 1.10.1
+        - 1.11.0
         compatible:
         - 1.0.1
         - 1.1.0-pre.7
@@ -3306,6 +3307,7 @@ m_PackageAssets:
         - 1.8.2
         - 1.9.0
         - 1.10.1
+        - 1.11.0
         verified: 1.0.1
       dependencies:
       - name: com.unity.modules.unitywebrequest

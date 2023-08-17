@@ -1,6 +1,5 @@
 sceneSetups:
-- path: Assets/Downtown Game Studio/Nature Pack - Low Polly Trees & Bushes/Scenes/Demo
-    Scene.unity
+- path: Assets/00. Scenes/SnowballFight.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

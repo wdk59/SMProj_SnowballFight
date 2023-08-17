@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SnowballFight.unity
+    path: Assets/00. Scenes/TitleUI.unity
+    guid: 4fe9ca53510820b4d8c31e37762d2b0c
+  - enabled: 1
+    path: Assets/00. Scenes/SnowballFight.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: a4a6ca54e4894a141a364676d2b3a0df, type: 2}
