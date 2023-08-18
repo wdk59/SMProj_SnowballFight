@@ -16,14 +16,14 @@ public class SnowballCollisionCheck : MonoBehaviour
 
         if (collision.gameObject.tag == "Snowman")
         {
-            Debug.Log("Äâ±¤");
+            Debug.Log("°ø°Ý Äâ±¤");
             Instantiate(crashSoundPrefab, position, rotation);
             //AudioSource.PlayClipAtPoint(crashSoundClip, position, 10);
         }
 
         if (collision.gameObject.tag != "Dummy" && collision.gameObject.tag != "Snowball")
         {
-            Debug.Log("¸ø ¸ÂÃã!");
+            Debug.Log("°ø°Ý ¸ø ¸ÂÃã!");
             Destroy(gameObject);
         }
     }
