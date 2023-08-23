@@ -12,11 +12,13 @@ public class SnowmanProjectileController : MonoBehaviour
     {
         Debug.Log("눈사람이 눈덩이를 던짐!");
         rb = GetComponent<Rigidbody>();
-        rb.AddRelativeForce(Vector3.forward * 2500.0f);
+        rb.AddRelativeForce(Vector3.forward * 2500.0f); // 이게 작동을 안 하는 중
     }
     void OnCollisionEnter(Collision collision)
     {
-        ContactPoint contact = collision.contacts[0];
+        //ContactPoint contact = collision.contacts[0];
+
+        Debug.Log("눈사람이 던진 곳: " + collision.gameObject.tag);
 
         if (collision.gameObject.tag == "Player")
         {
@@ -24,7 +26,7 @@ public class SnowmanProjectileController : MonoBehaviour
             //Instantiate(crashSoundPrefab, position, rotation);
             
         }
-        else
+        else if (collision.gameObject.tag != "Snowman")
         {
             Debug.Log("피함!");
             Destroy(gameObject);
