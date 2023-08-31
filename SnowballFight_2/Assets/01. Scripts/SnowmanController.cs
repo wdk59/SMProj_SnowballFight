@@ -73,7 +73,7 @@ public class SnowmanController : MonoBehaviour
     private void OnFire()
     {
         Vector3 dir = player.transform.position - firePos.transform.position;
-        Quaternion rot = Quaternion.LookRotation(dir.normalized);
+        Quaternion rot = Quaternion.LookRotation(dir).normalized;
 
         Debug.Log("户具户具 " + snowmanProjectile.name);
         Instantiate(snowmanProjectile, firePos.transform.position, rot);

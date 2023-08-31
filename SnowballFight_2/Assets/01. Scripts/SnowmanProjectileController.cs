@@ -12,7 +12,8 @@ public class SnowmanProjectileController : MonoBehaviour
     {
         Debug.Log("´«»ç¶÷ÀÌ ´«µ¢ÀÌ¸¦ ´øÁü!");
         rb = GetComponent<Rigidbody>();
-        rb.AddRelativeForce(Vector3.forward * 2500.0f); // ÀÌ°Ô ÀÛµ¿À» ¾È ÇÏ´Â Áß
+        rb.AddRelativeForce(Vector3.forward * 2500.0f);
+        //transform.Translate(Vector3.forward * 1f);
     }
     void OnCollisionEnter(Collision collision)
     {
@@ -24,9 +25,10 @@ public class SnowmanProjectileController : MonoBehaviour
         {
             Debug.Log("ÇÇ°Ý Äâ±¤");
             //Instantiate(crashSoundPrefab, position, rotation);
-            
+            Destroy(gameObject);
+
         }
-        else if (collision.gameObject.tag != "Snowman")
+        else if (collision.gameObject.tag != "Snowman" && collision.gameObject.tag != "Snowball")
         {
             Debug.Log("ÇÇÇÔ!");
             Destroy(gameObject);

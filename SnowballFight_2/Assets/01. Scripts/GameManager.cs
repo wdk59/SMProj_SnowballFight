@@ -5,10 +5,23 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     private short playerHP;
+
+    private short currentStage;
+
+    [SerializeField]
+    private GameObject[] playerHPIcon = new GameObject[5];
     
     private void Awake()
     {
-        playerHP = 3;
+        playerHP = 5;
+        currentStage = 1;
+    }
+
+    private void Initialize()
+    {
+        playerHP = 5;
+        // 하트 UI 그리기
+        currentStage = 1;
     }
 
     public short showPlayerHP()
@@ -18,6 +31,13 @@ public class GameManager : MonoBehaviour
 
     public short losePlayerHP()
     {
-        return --playerHP;
+        playerHP -= 1;
+        // Heart UI 변경
+        return playerHP;
+    }
+
+    public short showStage()
+    {
+        return currentStage;
     }
 }

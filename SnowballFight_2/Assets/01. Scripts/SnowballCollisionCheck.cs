@@ -21,7 +21,7 @@ public class SnowballCollisionCheck : MonoBehaviour
             //AudioSource.PlayClipAtPoint(crashSoundClip, position, 10);
         }
 
-        if (collision.gameObject.tag != "Dummy" && collision.gameObject.tag != "Snowball")
+        if (collision.gameObject.tag != "Dummy" && collision.gameObject.tag != "Snowball" && collision.gameObject.tag != "SnowmanProjectile")
         {
             Debug.Log("공격 못 맞춤!");
             Destroy(gameObject);

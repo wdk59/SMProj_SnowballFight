@@ -7,13 +7,23 @@ public class PlayerController : MonoBehaviour
     public GameManager gm;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Snowman")
+        if (collision.gameObject.tag == "SnowmanProjectile")
         {
             if (gm.losePlayerHP() <= 0)
             {
-                Debug.Log("죽었당");
-                Application.Quit();
+                OnDie();    // Invoke로 지연 주기
             }
         }
+    }
+
+    private void OnDie()
+    {
+        Debug.Log("죽었당");
+        Application.Quit();
+    }
+
+    private void Initialize()
+    {
+
     }
 }
