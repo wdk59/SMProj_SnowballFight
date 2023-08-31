@@ -2592,6 +2592,7 @@ GameObject:
   - component: {fileID: 1812455979}
   - component: {fileID: 1812455978}
   - component: {fileID: 1812455981}
+  - component: {fileID: 1812455982}
   m_Layer: 5
   m_Name: PauseBtn
   m_TagString: Untagged
@@ -2724,6 +2725,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a94997ff40ce8af439d798d4acd618c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1812455982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812455976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f8f6e9e6f3e114b9bf9a57c2160615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointable: {fileID: 0}
+  _whenRelease:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenHover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnhover:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenUnselect:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenMove:
+    m_PersistentCalls:
+      m_Calls: []
+  _whenCancel:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1867647601
 PrefabInstance:
   m_ObjectHideFlags: 0
