@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     private short playerHP;
+    public bool isPaused;
 
-    private short currentStage;
+    public short currentStage;
 
     [SerializeField]
     private GameObject[] playerHPIcon = new GameObject[5];
@@ -14,6 +16,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         playerHP = 5;
+        isPaused = false;
         currentStage = 1;
     }
 
@@ -31,13 +34,23 @@ public class GameManager : MonoBehaviour
 
     public short losePlayerHP()
     {
-        playerHP -= 1;
-        // Heart UI º¯°æ
+        if (playerHP > 0)
+        {
+            playerHP -= 1;
+            Debug.Log("playerHP: " + playerHP);
+            playerHPIcon[playerHP].SetActive(false);
+        }
+
         return playerHP;
     }
 
     public short showStage()
     {
         return currentStage;
+    }
+
+    public void stageUI()
+    {
+        
     }
 }
