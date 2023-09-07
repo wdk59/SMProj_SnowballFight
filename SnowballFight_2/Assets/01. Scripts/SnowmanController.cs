@@ -26,19 +26,14 @@ public class SnowmanController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Initialize();
-        StartCoroutine("AttackDelay");
+        //Initialize();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Initialize()
     {
-        
-    }
-
-    private void Initialize()
-    {
+        Debug.Log("Snowman Initialize");
         snowmanHP = snowmanStageHP[gm.currentStage - 1];
+        StartCoroutine("AttackDelay");
     }
 
     public void StageUp()
@@ -61,8 +56,8 @@ public class SnowmanController : MonoBehaviour
     private void LoseHP(short damage)
     {
         snowmanHP -= damage;
+        Debug.Log("눈사람 아야: " + snowmanHP);
         if (snowmanHP <= 0) {
-            gm.isPaused = true;
             Invoke("OnDie", 2f);
         }
     }
@@ -77,20 +72,22 @@ public class SnowmanController : MonoBehaviour
         Debug.Log("Stage Clear!");
         gm.currentStage++;
         Debug.Log("Stage Num: " + gm.currentStage);
-        StageUp();
-        if (gm.currentStage == 3)
+        if (gm.currentStage > 3)
         {
+            Debug.Log("2초 뒤 StageClear()");
             // 텍스트 띄워놓기 (눈사람은 패배를 인정하고 봄을 돌려주기로 했고, 결국 녹아 없어졌다. 사람들은 이 일을 계기로 환경을 복구하기 위해 노력하게 되었다.)
             Invoke("StageClear", 2f);
         }
         else
         {
+            StageUp();
             player.gameObject.GetComponent<PlayerController>().StartStageInfo(snowmanStageHP[gm.currentStage - 1], attackDelay[gm.currentStage - 1]);
         }
     }
 
     private void StageClear()
     {
+        Debug.Log("StageClear()");
         SceneManager.LoadScene("Lobby");
     }
 

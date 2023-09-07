@@ -37,19 +37,24 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void StartStageInfo(short snowmanHP, float snowmanFrequency)
+    public void StartStageInfo(short snowmanHP, float snowmanFrequency) // stage upgrade
     {
-        currentStageIcon.transform.position = stageIconPos[0].position;
+        Debug.Log("StartStageInfo");
+        gm.isPaused = true;
+        currentStageIcon.transform.position = stageIconPos[gm.currentStage - 1].position;
         snowmanInfoValue.text = snowmanHP + "\n" + snowmanFrequency;
         stageInfoPanel.SetActive(true);
         snowman.SetActive(false);
+        gm.StageUp();
         Invoke("ExitStageInfo", 3f);
     }
     private void ExitStageInfo()
     {
+        Debug.Log("ExitStageInfo");
         stageInfoPanel.SetActive(false);
         gm.isPaused = false;
         snowman.SetActive(true);
+        snowman.GetComponent<SnowmanController>().Initialize();
     }
 
     private void OnDie()

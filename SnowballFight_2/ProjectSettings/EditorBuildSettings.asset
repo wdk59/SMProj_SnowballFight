@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/00. Scenes/TitleUI.unity
-    guid: 4fe9ca53510820b4d8c31e37762d2b0c
+    path: Assets/00. Scenes/Lobby.unity
+    guid: 73a56b60e4dd44242a11926e6873f0b6
   - enabled: 1
     path: Assets/00. Scenes/SnowballFight.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab

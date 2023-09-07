@@ -27,6 +27,15 @@ public class GameManager : MonoBehaviour
         currentStage = 1;
     }
 
+    public void StageUp()
+    {
+        playerHP = 5;
+        for (int i = 0; i < 5; i++)
+        {
+            playerHPIcon[i].SetActive(true);
+        }
+    }
+
     public short showPlayerHP()
     {
         return playerHP;
